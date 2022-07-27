@@ -26,3 +26,7 @@ function generatePass(){
     passwordEl2.textContent = pass2
 }
 
+//TODO: add feature to input a password length
+//TODO: potentially add feature to set requirements for a password
+
+
