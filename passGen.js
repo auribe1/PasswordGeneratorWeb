@@ -29,10 +29,15 @@ function generatePass(){
     passwordsExist = true
 }
 
-//in progress of adding copy text on click function
+//didn't really know how to take in the id of the element being clicked so two seperate functions were made to copy the text of the passwords to the clipboard
 function copyText(){
-    var copyText1 = document.getElementById('password-el')
-    var copyText2 = document.getElementById('passwordEl2')
+    let copyText2 = document.getElementById("password-el2").addEventListener("click", navigator.clipboard.writeText(passwordEl.innerHTML))
+    alert("The password has been copied to clipboard")
+}
+
+function copyTextOne(){
+    let copyText1 = document.getElementById("password-el").addEventListener("click", navigator.clipboard.writeText(passwordEl2.innerHTML))
+    alert("The password has been copied to clipboard")
 }
 
 //TODO: add feature to input a password length
