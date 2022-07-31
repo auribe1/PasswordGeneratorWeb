@@ -2,11 +2,14 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"];
 
 passwordsExist = false
+passwordLength = prompt("Please enter a length for your password:");
 
 let pass = ""
 let passwordEl = document.getElementById("password-el")
 let pass2 = ""
 let passwordEl2 = document.getElementById("password-el2")
+
+
 function generateRandNum(){
     let num = Math.floor(Math.random() * characters.length)
     return num
@@ -18,7 +21,7 @@ function generatePass(){
     passwordEl.textContent = ""
     pass2 = ""
     passwordEl2.textContent = ""
-    for(let i = 0; i < 15; i++){
+    for(let i = 0; i < passwordLength; i++){
         let number = generateRandNum()
         pass += characters[number]
         let number2 = generateRandNum()
@@ -42,5 +45,3 @@ function copyTextOne(){
 
 //TODO: add feature to input a password length
 //TODO: potentially add feature to set requirements for a password
-
-
