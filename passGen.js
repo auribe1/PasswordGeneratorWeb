@@ -1,8 +1,18 @@
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
+//added these for the special requirements someone will send in for their password
+const numbers = ["0","1","2","3","4","5","6","7","8","9"]
+const capitals = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+const lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+const special = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
+"/"]
 
 passwordsExist = false
-passwordLength = prompt("Please enter a length for your password:");
+let passwordLength = 0
+while(passwordLength <1 || passwordLength > 20){
+    passwordLength = prompt("Please enter a password length that is between 1 and 20")
+}
+
 
 let pass = ""
 let passwordEl = document.getElementById("password-el")
@@ -43,5 +53,5 @@ function copyTextOne(){
     alert("The password has been copied to clipboard")
 }
 
-//TODO: add feature to input a password length
+
 //TODO: potentially add feature to set requirements for a password
