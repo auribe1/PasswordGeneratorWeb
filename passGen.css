@@ -1,6 +1,11 @@
 /*
 TODO: Make everything look good!
 */
+html{
+    height: 100%;
+    width: 100%;
+}
+
 
 unpopulated-state{
     position: absolute;
@@ -14,14 +19,28 @@ unpopulated-state{
 
 
 
+h1{
+    position: fixed;
+    top: 15%;
+    left: 35%;
+   
+}
+
 
 .Heading{
+    
+    
+    border: 3px dotted #999;
+    background-repeat: no-repeat;
     position: absolute;
-    width: 354px;
+    
+    /**width: 354px;
     height: 80px;
     left: 52px;
     top: 115px;
-
+    */
+    width : 354px;
+    
     font-family: 'Karla';
     font-style: normal;
     font-weight: 800;
@@ -30,8 +49,17 @@ unpopulated-state{
     /* or 100% */
     letter-spacing: -0.025em;
 
-    /* white */
     color: #10B981;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
 }
 
 .Heading:first-line{
@@ -42,9 +70,10 @@ unpopulated-state{
 
 .Supporting-Text{
     position: absolute;
+    left: 35%;
     width: 372px;
     height: 28px;
-    left: 52px;
+    
     top: 205px;
 
     /* text-xl/leading-7/font-normal */
@@ -138,21 +167,26 @@ unpopulated-state{
 }
 
 #password-el {
+    line-height: 0px;
+    font-size: x-large;
+    
     font-style: italic;
-    color: #FBBF24;
+    color: greenyellow;
     
 }
 
 #password-el2{
+    line-height: 0px;
     font-style: italic;
-    color: #FBBF24;
+    font-size: x-large;
+    color: greenyellow;
     
 }
 
 
 body {
     padding: 40px;
-    background: rgb(65, 65, 65);
+    background: rgb(28, 28, 28);
     text-align: center;
 }
 

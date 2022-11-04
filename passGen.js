@@ -26,6 +26,11 @@ function generateRandNum(){
 
 }
 
+function clearClip(){
+    alert("clip board should be clean")
+    navigator.clipboard.writeText("")
+}
+
 function generatePass(){
     pass = ""
     passwordEl.textContent = ""
@@ -44,13 +49,14 @@ function generatePass(){
 
 //didn't really know how to take in the id of the element being clicked so two seperate functions were made to copy the text of the passwords to the clipboard
 function copyText(){
+    
     let copyText2 = document.getElementById("password-el2").addEventListener("click", navigator.clipboard.writeText(passwordEl.innerHTML))
-    alert("The password has been copied to clipboard")
+    alert("The right password has been copied to clipboard")
 }
 
 function copyTextOne(){
     let copyText1 = document.getElementById("password-el").addEventListener("click", navigator.clipboard.writeText(passwordEl2.innerHTML))
-    alert("The password has been copied to clipboard")
+    alert("The left password has been copied to clipboard")
 }
 
 
